@@ -118,8 +118,8 @@ public class PlayerTempTickC2SPacket {
             ThermMod.config.heatingBlocks.forEach((b, t) -> {
                 if (Objects.equals(state.getBlock().toString(), b)) {
 
-                    if (state.isOf(Blocks.CAMPFIRE) || state.isOf(Blocks.SOUL_CAMPFIRE)) { //hard code to keep unlit campfires from heating.
-                        if (state.get(CampfireBlock.LIT)) {
+                    if (state.isOf(Blocks.CAMPFIRE) || state.isOf(Blocks.SOUL_CAMPFIRE) || state.isOf(Blocks.STOVE)) { //hard code to keep unlit campfires from heating.
+                        if (state.get(CampfireBlock.LIT) || state.isOf(StoveBlock.LIT)) {
                             playerState.restingTemp += t;
                         }
                     } else {
