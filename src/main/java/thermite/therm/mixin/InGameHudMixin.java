@@ -20,7 +20,7 @@ import thermite.therm.client.TemperatureHudOverlay;
 @Mixin(InGameHud.class)
 public class InGameHudMixin {
     @Inject(method = "renderVignetteOverlay", at = @At(value = "HEAD"), cancellable = true)
-    private void temperatureOverlay(DrawContext context, Entity entity, CallbackInfo cir) {
+    private void temperatureOverlay(DrawContext context, Entity entity, CallbackInfo ci) {
 
         if (ThermMod.config.enableTemperatureVignette) {
             MinecraftClient client = MinecraftClient.getInstance();
