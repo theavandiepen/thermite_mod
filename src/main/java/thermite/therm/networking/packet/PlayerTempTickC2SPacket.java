@@ -161,30 +161,30 @@ public class PlayerTempTickC2SPacket {
         //armor items
         ThermMod.config.bootTempItems.forEach((it, t) -> {
             if (Objects.equals(player.getInventory().getArmorStack(0).getItem().toString(), it)) {
-                playerState.restingTemp += t;
+                playerState.restingTemp += Integer.valueOf(t);
             }
         });
         ThermMod.config.leggingTempItems.forEach((it, t) -> {
             if (Objects.equals(player.getInventory().getArmorStack(1).getItem().toString(), it)) {
-                playerState.restingTemp += t;
+                playerState.restingTemp += Integer.valueOf(t);
             }
         });
         ThermMod.config.chestplateTempItems.forEach((it, t) -> {
             if (Objects.equals(player.getInventory().getArmorStack(2).getItem().toString(), it)) {
-                playerState.restingTemp += t;
+                playerState.restingTemp += Integer.valueOf(t);
             }
         });
         ThermMod.config.helmetTempItems.forEach((it, t) -> {
             if (Objects.equals(player.getInventory().getArmorStack(3).getItem().toString(), it)) {
-                playerState.restingTemp += t;
+                playerState.restingTemp += Integer.valueOf(t);
             }
         });
         ThermMod.config.heldTempItems.forEach((it, t) -> {
             if (Objects.equals(player.getInventory().getMainHandStack().getItem().toString(), it)) {
-                playerState.restingTemp += t;
+                playerState.restingTemp += Integer.valueOf(t);
             }
             if (Objects.equals(player.getInventory().offHand.get(0).getItem().toString(), it)) {
-                playerState.restingTemp += t;
+                playerState.restingTemp += Integer.valueOf(t);
             }
         });
 
