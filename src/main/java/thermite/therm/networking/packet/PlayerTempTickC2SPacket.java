@@ -119,7 +119,7 @@ public class PlayerTempTickC2SPacket {
                 if (Objects.equals(state.getBlock().toString(), b)) {
 
                     if (state.isOf(Blocks.CAMPFIRE) || state.isOf(Blocks.SOUL_CAMPFIRE)) { //hard code to keep unlit campfires from heating.
-                        if (state.get(CampfireBlock.LIT) || state.isOf(StoveBlock.LIT)) {
+                        if (state.get(CampfireBlock.LIT)) {
                             playerState.restingTemp += t;
                         }
                     } else {
